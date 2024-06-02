@@ -1,0 +1,3 @@
+mplcursors
+openseespy
+numpy
