@@ -11,7 +11,7 @@ Creates tooltip for nodes and elements with OpenSeesPy and mplcursors.
 
 - Users can display tooltip for elements and nodes with `get_tooltips_for_elements` and `get_tooltips_for_nodes` functions, respectively. In addition, custom texts can be added with `add_custom_text` function.
 
-- The script uses Matplotlib's **ax** object as input, facilitating seamless integration with [opsvis](https://github.com/sewkokot/opsvis) (OpenSeesPy postprocessing and plotting module). Examples of 2D and 3D models are give in `example2D.py` and `example3D.py`, respectively.
+- The script uses Matplotlib's **ax** object as input, facilitating seamless integration with [opsvis](https://github.com/sewkokot/opsvis) (OpenSeesPy postprocessing and plotting module). Examples of 2D and 3D models are given in `example2D.py` and `example3D.py`, respectively.
 
 - For elements, the effective hover range is set to the middle 70% of the element's length to avoid multiple tooltips at the nodes.
   
