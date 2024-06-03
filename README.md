@@ -1,7 +1,10 @@
 # OpsTooltip
 Creates tooltip for nodes and elements from OpenSeesPy with mplcursors.
 
-<img src="demo.gif" alt="demo of OpsTooltip" height="350px">
+<center>
+<img src="images/demo3D.gif" alt="3D demo of OpsTooltip" height="290px" width ="300px">
+<img src="images/demo2D.gif" alt="2D demo of OpsTooltip" height="290px" width ="300px">
+</center>
 
 ## Description
 - This script enables users to obtain information about nodes and elements by hovering over them. Initially, it generates a JSON file containing information about geometry i.e. nodes and elements. Subsequently, the script reads the node and element data from the JSON file. Finally, it utilizes [mplcursors](https://github.com/anntzer/mplcursors) to create tooltips, providing insights when users hover over nodes and elements during visualization.
@@ -10,6 +13,8 @@ Creates tooltip for nodes and elements from OpenSeesPy with mplcursors.
 
 - The script uses Matplotlib's **ax** object as input, facilitating seamless integration with [opsvis](https://github.com/sewkokot/opsvis) (OpenSeesPy postprocessing and plotting module). Examples of 2D and 3D models are give in `example2D.py` and `example3D.py`, respectively.
 
+- For elements, the effective hover range is set to the middle 70% of the element's length to avoid multiple tooltips at the nodes.
+  
 ```
 # Example
 # create a figure
