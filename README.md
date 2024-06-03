@@ -2,8 +2,8 @@
 Creates tooltip for nodes and elements from OpenSeesPy with mplcursors.
 
 <div align="center">
-<img src="images/demo3D.gif" alt="3D demo of OpsTooltip" height="380px" width ="400px">
-<img src="images/demo2D.gif" alt="2D demo of OpsTooltip" height="380px" width ="400px">
+<img src="images/demo3D.gif" alt="3D demo of OpsTooltip" height="370px" width ="380px">
+<img src="images/demo2D.gif" alt="2D demo of OpsTooltip" height="370px" width ="380px">
 </div>
 
 ## Description
