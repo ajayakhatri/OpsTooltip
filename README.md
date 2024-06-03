@@ -1,5 +1,5 @@
 # OpsTooltip
-Creates tooltip for nodes and elements from OpenSeesPy with mplcursors.
+Creates tooltip for nodes and elements with OpenSeesPy and mplcursors.
 
 <div align="center">
 <img src="images/demo3D.gif" alt="3D demo of OpsTooltip" height="350px" width ="380px">
