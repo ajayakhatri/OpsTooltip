@@ -131,18 +131,13 @@ def get_tooltips_for_elements(ax):
         i_coord = ops.nodeCoord(elements[ele][0])
         j_coord = ops.nodeCoord(elements[ele][1])
 
-        if ndim == 2:
-            line, = ax.plot(*get_Middle_Line(i_coord, j_coord),
-                            color='none', linestyle='-')
-            mplcursors.cursor(line, hover=mplcursors.HoverMode.Transient).connect(
-                "add", lambda sel, ele=ele: sel.annotation.set_text(element_info_clean[ele]))
-        elif ndim == 3:
-            line, = ax.plot(*get_Middle_Line(i_coord, j_coord),
-                            color='none', linestyle='-')
-            mplcursors.cursor(line, hover=mplcursors.HoverMode.Transient).connect(
-                "add", lambda sel, ele=ele: sel.annotation.set_text(element_info_clean[ele]))
-        else:
-            return None
+        line, = ax.plot(*get_Middle_Line(i_coord, j_coord),
+                        color='none', linestyle='-')
+        mplcursors.cursor(line, hover=mplcursors.HoverMode.Transient).connect(
+            "add", lambda sel, ele=ele: (sel.annotation.set_text(element_info_clean[ele]),
+                                         sel.annotation.get_bbox_patch().set(fc="white", alpha=1.0),
+                                         sel.annotation.arrow_patch.set(arrowstyle="simple", fc="white", alpha=1)))
+
     return ax
 
 
@@ -183,5 +178,9 @@ def get_tooltips_for_nodes(ax):
     else:
         return None
     cursor = mplcursors.cursor(points, hover=mplcursors.HoverMode.Transient)
-    cursor.connect("add", lambda sel: sel.annotation.set_text(
-        node_info_clean[sel.index]))
+    cursor.connect("add", lambda sel: (
+        sel.annotation.set_text(node_info_clean[sel.index]),
+        sel.annotation.get_bbox_patch().set(fc="white", alpha=1.0),
+        sel.annotation.arrow_patch.set(
+            arrowstyle="simple", fc="white", alpha=1.0)
+    ))
